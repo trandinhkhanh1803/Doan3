@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context=".UI.SeeMoreActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/detail_toolbar"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="?actionBarSize">
+                    <TextView
+                        android:text="Recommended"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </androidx.appcompat.widget.Toolbar>
+                <ImageView
+                    android:id="@+id/ac_newAct"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:scaleType="center"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_cart" />
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <ImageView
+            android:src="@drawable/food_bg_top"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"/>
+
+        <LinearLayout
+            android:translationY="-20dp"
+            android:orientation="vertical"
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/res_bg"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/res_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_see_more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
